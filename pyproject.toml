@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "comtool"
 dynamic = ["version"]
-description = ''
+description = "COMTool, an efficient serial port debugging tool, specifically designed for receiving and transmitting data through serial ports in TEXT and HEX modes."
 readme = "README.md"
 requires-python = ">=3.8"
 license = "MIT"
