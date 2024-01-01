@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "comtool"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [
+  { name = "hydrotho", email = "42911474+hydrotho@users.noreply.github.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Topic :: Software Development :: Embedded Systems",
+  "Topic :: Terminals :: Serial",
+]
+dependencies = [
+  "prompt-toolkit>=3.0.0",
+  "pyserial>=3.5",
+  "typer[all]>=0.9.0",
+]
+
+[project.urls]
+Source = "https://github.com/hydrotho/COMTool"
+Issues = "https://github.com/hydrotho/COMTool/issues"
+
+[project.scripts]
+comtool = "comtool.__main__:app"
+
+[tool.hatch.version]
+path = "src/comtool/__about__.py"
+
+[tool.hatch.build.targets.sdist]
+only-include = ["src/comtool"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/comtool"]
